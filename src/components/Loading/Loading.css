@@ -1,0 +1,64 @@
+.loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #020617;
+    /* خلفية مظلمة ثابتة */
+}
+
+.card {
+    padding: 40px 55px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 15px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+
+    /* ✨ تأثير اللمعان على الكارد */
+    background: linear-gradient(270deg, #6366f1, #1e293b, #6366f1);
+    background-size: 400% 400%;
+    animation: glowCard 4s ease infinite;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #6366f1;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #f8fafc;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #cbd5f5;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes glowCard {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
